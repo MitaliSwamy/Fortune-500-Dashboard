@@ -29,22 +29,21 @@ It’s designed for automation, analysis, and visualization of company trends li
 ✅ Built-in logging & alerts for scraper runs
 
 📂 Project Structure
-Fortune-500-Dashboard/
-│── assets/               # CSS and frontend assets
-│   └── style.css
+### Project Structure
+ 
+│── style.css # CSS and frontend assets (if any)
 │
-│── Scraper/              # Scraper logic
-│   ├── __init__.py
-│   ├── db.py             # Database connection
-│   ├── logger.py         # Logging + email alerts
-│   ├── parsers.py        # Data parsing helpers
-│   └── scraper.py        # Selenium scraper
-│
-│── .env                  # Environment variables (DB creds, email creds)
-│── app.py                # Dash app (data visualization)
-│── config.py             # Config loader (reads from .env)
-│── run.py                # Entry point (scheduler + scraper)
-│── requirements.txt      # Python dependencies
+│── api.py # API or scraping logic
+│── csvfileconversion.py # CSV/Excel conversion utilities
+│── final.py # Main processing script
+│── log changes.py # Logs / changes tracking
+│── logging system.py # Logging utilities
+│── main.py # Main program
+│── normalization.py # Data normalization utilities
+│── run.py # Entry point (scheduler + scraper)
+│── .env.example # Example environment variables
+│── requirements.txt # Python dependencies
+
 
 🛠️ Tech Stack
 
@@ -78,5 +77,7 @@ python run.py
 📝 Notes
 
 Ensure your MySQL server is running and accessible.
+
 Adjust scraping intervals in run.py as needed.
+
 Email alerts will be sent on scraper failure (configured in .env).
